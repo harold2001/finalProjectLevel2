@@ -1,0 +1,17 @@
+body {
+    background-image: url(./imgs/background.png);
+    background-size: 100%;
+}
+
+.btn {
+    width: 100%;
+}
+.on {
+    background-color: #EA8282 !important;
+    border: 0;
+}
+
+.onTrue {
+    background-color: #60BF88 !important;
+    border: 0;
+}
