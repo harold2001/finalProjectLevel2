@@ -71,8 +71,3 @@ export default {
 }
 
 
-// <div class="row">
-// <div class="col-3">
-//    <img class="rounded" src="https://flagcdn.com/th.svg" style="width: 100%;"/>
-// </div>
-// </div>
