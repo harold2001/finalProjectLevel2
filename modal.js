@@ -1,6 +1,6 @@
 export const URL = `https://restcountries.com/v3.1/all`;
 
-function getRandom(min, max) {
+export function getRandom(min, max) {
 
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -67,7 +67,8 @@ export async function getData(URL) {
 
 export default {
     URL,
-    getData
+    getData,
+    getRandom
 }
 
 

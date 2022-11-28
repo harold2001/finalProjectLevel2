@@ -34,32 +34,73 @@
    </head>
 
    <body>
-      <div class="container p-0 d-flex flex-column justify-content-center" style="width: 450px; height: 100vh; outline: 1px solid">
+      <div class="container p-0 d-flex flex-column justify-content-center" style="width: 450px; height: 100vh">
       
-         <div class="container p-0" style="width: 100%; outline: 1px solid">
+         <div class="container p-0" style="width: 100%">
             <h1 class="text-white fw-bold fs-1">COUNTRY QUIZ</h1>
    
-            <div class="container p-0 mt-3 bg-white rounded-4" style="height: 500px">
+            <div class="container p-0 mt-3">
                <!-- <div
                   class="d-flex justify-content-center"
                   style="height: 100%"> -->
                   <div
                      id="body-div"
-                     class="" style=" width:100%;height: 100%">
-                     <div class="text-end" style="height: 20%">
+                     class=" bg-white rounded-4 position-relative  py-5 px-4" style=" width:100%; height: 100%">
+                     <div class="text-end position-absolute end-0" style="width: 35%; top: -15%;">
                         <img
                            src="./imgs/undraw_adventure_4hum 1.svg"
-                           style="height: 100%" />
+                           style="width: 100%"/>
                      </div>
+                     <div id="img-flag"></div>
    
                      <div
                         id="demo"
-                        class="d-flex flex-column justify-content-center align-items-center gap-4"
-                        style="width: 100%; height: 60%">
+                        class="d-flex flex-column justify-content-center align-items-center gap-4 mt-4"
+                        style="width: 100%;">
+
+                        <!-- <p class="h3 align-self-start">${obj.capital} is the capital of</p>
+
+                        <div class="d-flex flex-column gap-4 px-3" >
+                           <div class="order-${arrRandom[0]}">
+                              <button class="true d-flex gap-3 btn btn-outline-primary py-0">
+                                 <span class="input-group-text bg-transparent border-0">${arrLetras[arrRandom1]}</span>
+                                 <span class="input-group-text bg-transparent border-0">${obj.pais}</span>
+                              </button>
+                           </div>
+                       
+                           <div class="order-${arrRandom[1]}">
+                              <button class="false d-flex gap-3 btn btn-outline-primary py-0">
+                                 <span class="input-group-text bg-transparent border-0">${arrLetras[arrRandom2]}</span>
+                                 <span class="input-group-text bg-transparent border-0">${obj.pais1}</span>
+                              </button>
+                           </div>
+                       
+                           <div class="order-${arrRandom[2]}">
+                              <button class="false d-flex gap-3 btn btn-outline-primary py-0">
+                                 <span class="input-group-text bg-transparent border-0">${arrLetras[arrRandom3]}</span>
+                                 <span class="input-group-text bg-transparent border-0">${obj.pais2}</span>
+                              </button>
+                           </div>
+                       
+                           <div class="order-${arrRandom[3]}">
+                              <button class="false d-flex gap-3 btn btn-outline-primary py-0">
+                                 <span class="input-group-text bg-transparent border-0">${arrLetras[arrRandom4]}</span>
+                                 <span class="input-group-text bg-transparent border-0">${obj.pais3}</span>
+                              </button>
+                           </div> -->
+                        </div>
+                        
+
 
    
                      </div>
-                  </div>
+<!-- 
+                     <div class="position-relative" style="width: 100%; top: 20px;">
+                        <div class="d-flex justify-content-end">
+                           <button id="buttonNext" class="btn btn-primary" style="width: 20%;">NEXT</button>
+                       </div>
+                     </div>
+                  </div> -->
                <!-- </div> -->
             </div>
          </div>
