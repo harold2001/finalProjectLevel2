@@ -11,11 +11,12 @@ let score = 0;
 let attempts = 0;
 
 async function start() {
-    
-    const data = await m.getData(m.URL);
-    console.log(data);
 
-    const i = m.getRandom(0,2)
+    const data = await m.getData(m.URL);
+    // console.log(data);
+
+    const i = m.getRandom(0, 2)
+    // console.log(i);
 
     const randomDOM = [v.setDOMCapital, v.setDOMCountry];
     randomDOM[i](data)
@@ -30,12 +31,12 @@ async function start() {
         buttons.forEach(btn => btn.disabled = true);
         score++;
         attempts++;
-        
+
         v.setButtonNext()
-        
+
         const buttonNext = $("#buttonNext")
         if (buttonNext) {
-            
+
             buttonNext.addEventListener("click", async () => {
                 await start()
                 v.removeButtonNext()
@@ -46,11 +47,12 @@ async function start() {
         }
 
         if (attempts === 1) {
-            v.setButtonNext()
+            // v.setButtonNext()
+            v.removeButtonNext()
             v.resultsDOM(score);
             buttonTryAgain();
-            attempts=0;
-            score=0;
+            attempts = 0;
+            score = 0;
         }
     })
 
@@ -80,22 +82,22 @@ async function start() {
             console.log(attempts);
 
             if (attempts === 1) {
-                v.setButtonNext();
+                // v.setButtonNext();
+                v.removeButtonNext()
                 v.resultsDOM(score);
                 buttonTryAgain();
-                attempts=0
-                score=0;
+                attempts = 0
+                score = 0;
             }
         })
     })
 
 }
 
-function buttonTryAgain () {
+function buttonTryAgain() {
     const buttonDOM = $("#tryAgain");
-    console.log(buttonDOM);
 
-    buttonDOM.addEventListener("click" , () => {
+    buttonDOM.addEventListener("click", () => {
         start();
     })
 }
