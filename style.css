@@ -4,24 +4,34 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+h1 {
+    font-size: 2rem !important;
+}
 
 .options {
     width: 100%;
+    color: #6066D0;
     border: 2px solid rgba(96, 102, 208, 0.7);
+    word-spacing: 1rem;
+}
+
+small {
+    word-spacing: normal;
 }
 
 .options:hover {
     background-color: #F9A826;
+    color: #FFF;
 }
 
-.on {
+.onFalse {
     background-color: #EA8282 !important;
-    border: 0;
+    border: 2px solid transparent !important;
 }
 
 .onTrue {
     background-color: #60BF88 !important;
-    border: 0;
+    border: 2px solid transparent !important;
 }
 
 #boton-next {

@@ -13,27 +13,29 @@ let attempts = 0;
 async function start() {
 
     const data = await m.getData(m.URL);
-    // console.log(data);
 
-    const i = m.getRandom(0, 2)
-    // console.log(i);
+    const i = m.getRandom(0, 2);
 
     const randomDOM = [v.setDOMCapital, v.setDOMCountry];
-    randomDOM[i](data)
+    randomDOM[i](data);
 
-    const buttonsFalse = [...document.querySelectorAll(".false")];
     const buttons = [...document.querySelectorAll(".btn")];
+    const buttonsFalse = [...document.querySelectorAll(".false")];
     const buttonTrue = $(".true");
 
     buttonTrue.addEventListener("click", () => {
-
-        buttonTrue.classList.add("onTrue")
-        buttons.forEach(btn => btn.disabled = true);
+        
         score++;
         attempts++;
 
-        v.setButtonNext()
+        //Agregar la clase "onTrue" para agregarle estilos
+        buttonTrue.classList.add("onTrue");
 
+        buttons.forEach(btn => btn.disabled = true);
+
+        v.setButtonNext();
+
+        //Corroborar botón y removerlo con click.
         const buttonNext = $("#buttonNext")
         if (buttonNext) {
 
@@ -41,13 +43,9 @@ async function start() {
                 await start()
                 v.removeButtonNext()
             })
-        } else {
-
-            v.setButtonNext()
         }
 
-        if (attempts === 1) {
-            // v.setButtonNext()
+        if (attempts === 10) {
             v.removeButtonNext()
             v.resultsDOM(score);
             buttonTryAgain();
@@ -61,13 +59,16 @@ async function start() {
         buttonF.addEventListener("click", () => {
 
             attempts++
-
-            buttonF.classList.add("on");
+            
+            //Agregar la clase "onTrue" y "onFalse" para agregarles estilos
+            buttonF.classList.add("onFalse");
             buttonTrue.classList.add("onTrue");
+
             buttons.forEach(btn => btn.disabled = true);
 
             v.setButtonNext()
 
+            //Corroborar botón y removerlo con click.
             const buttonNext = $("#buttonNext")
             if (buttonNext) {
 
@@ -75,14 +76,9 @@ async function start() {
                     await start()
                     v.removeButtonNext()
                 })
-            } else {
-
-                v.setButtonNext()
             }
-            console.log(attempts);
 
-            if (attempts === 1) {
-                // v.setButtonNext();
+            if (attempts === 10) {
                 v.removeButtonNext()
                 v.resultsDOM(score);
                 buttonTryAgain();
@@ -90,10 +86,10 @@ async function start() {
                 score = 0;
             }
         })
-    })
+    });
+};
 
-}
-
+//Botón del resultado
 function buttonTryAgain() {
     const buttonDOM = $("#tryAgain");
 

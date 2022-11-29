@@ -1,7 +1,6 @@
 const divBody = document.querySelector("#body-div");
-const divElem = document.querySelector("#demo");
+const divDemo = document.querySelector("#demo");
 const divButton = document.createElement("div");
-
 
 function sortRandom() {
    let arr = [0, 1, 2, 3]
@@ -17,7 +16,7 @@ export function setDOMCapital(obj) {
 
    let arrRandom = sortRandom();
 
-   divElem.innerHTML = `
+   divDemo.innerHTML = `
 
    <div class="text-end position-absolute end-0" style="width: 35%; top: -20%;">
       <img
@@ -30,31 +29,28 @@ export function setDOMCapital(obj) {
    <div class="d-flex flex-column gap-4 px-3" style="width:100%">
       <div class="order-${arrRandom[0]}">
          <button class="options true d-flex gap-3 btn py-2 px-3">
-            <span class="input-group-text bg-transparent border-0 p-0">${arrLetras[arrRandom[0]]}</span>
-            <span class="input-group-text bg-transparent border-0 p-0 text-wrap text-start">${obj.pais}</span>
+         ${arrLetras[arrRandom[0]]} <small class="fs-6 text-start">${obj.pais}</small>
          </button>
       </div>
   
       <div class="order-${arrRandom[1]}">
          <button class="options false d-flex gap-3 btn py-2 px-3">
-            <span class="input-group-text bg-transparent border-0 p-0">${arrLetras[arrRandom[1]]}</span>
-            <span class="input-group-text bg-transparent border-0 p-0 text-wrap text-start">${obj.pais1}</span>
+         ${arrLetras[arrRandom[1]]} <small class="fs-6 text-start">${obj.pais1}</small>
          </button>
       </div>
   
       <div class="order-${arrRandom[2]}">
          <button class="options false d-flex gap-3 btn py-2 px-3">
-            <span class="input-group-text bg-transparent border-0 p-0">${arrLetras[arrRandom[2]]}</span>
-            <span class="input-group-text bg-transparent border-0 p-0 text-wrap text-start">${obj.pais2}</span>
+         ${arrLetras[arrRandom[2]]} <small class="fs-6 text-start">${obj.pais2}</small>
          </button>
       </div>
   
       <div class="order-${arrRandom[3]}">
          <button class="options false d-flex gap-3 btn py-2 px-3">
-            <span class="input-group-text bg-transparent border-0 p-0">${arrLetras[arrRandom[3]]}</span>
-            <span class="input-group-text bg-transparent border-0 p-0 text-wrap text-start">${obj.pais3}</span>
+         ${arrLetras[arrRandom[3]]} <small class="fs-6 text-start">${obj.pais3}</small>
          </button>
       </div>
+   </div>
     `
 }
 
@@ -62,7 +58,7 @@ export function setDOMCountry(obj) {
 
    let arrRandom = sortRandom();
 
-   divElem.innerHTML = `
+   divDemo.innerHTML = `
 
    <div class="text-end position-absolute end-0" style="width: 35%; top: -15%;">
       <img
@@ -77,45 +73,41 @@ export function setDOMCountry(obj) {
     <p class="h3 align-self-start ps-3">Which country does this flag belong to?</p>
 
     <div class="d-flex flex-column gap-4 px-3" style="width:100%">
-    <div class="order-${arrRandom[0]}">
-       <button class="options true d-flex gap-3 btn py-2 px-3">
-          <span class="input-group-text bg-transparent border-0 p-0">${arrLetras[arrRandom[0]]}</span>
-          <span class="input-group-text bg-transparent border-0 p-0 text-wrap text-start">${obj.pais}</span>
-       </button>
-    </div>
+      <div class="order-${arrRandom[0]}">
+         <button class="options true d-flex gap-3 btn py-2 px-3">
+         ${arrLetras[arrRandom[0]]} <small class="fs-6 text-start">${obj.pais}</small>
+         </button>
+      </div>
 
-    <div class="order-${arrRandom[1]}">
-       <button class="options false d-flex gap-3 btn py-2 px-3">
-          <span class="input-group-text bg-transparent border-0 p-0">${arrLetras[arrRandom[1]]}</span>
-          <span class="input-group-text bg-transparent border-0 p-0 text-wrap text-start">${obj.pais1}</span>
-       </button>
-    </div>
+      <div class="order-${arrRandom[1]}">
+         <button class="options false d-flex gap-3 btn py-2 px-3">
+         ${arrLetras[arrRandom[1]]} <small class="fs-6 text-start">${obj.pais1}</small>
+         </button>
+      </div>
 
-    <div class="order-${arrRandom[2]}">
-       <button class="options false d-flex gap-3 btn py-2 px-3">
-          <span class="input-group-text bg-transparent border-0 p-0">${arrLetras[arrRandom[2]]}</span>
-          <span class="input-group-text bg-transparent border-0 p-0 text-wrap text-start">${obj.pais2}</span>
-       </button>
-    </div>
+      <div class="order-${arrRandom[2]}">
+         <button class="options false d-flex gap-3 btn py-2 px-3">
+         ${arrLetras[arrRandom[2]]} <small class="fs-6 text-start">${obj.pais2}</small>
+         </button>
+      </div>
 
-    <div class="order-${arrRandom[3]}">
-       <button class="options false d-flex gap-3 btn py-2 px-3">
-          <span class="input-group-text bg-transparent border-0 p-0">${arrLetras[arrRandom[3]]}</span>
-          <span class="input-group-text bg-transparent border-0 p-0 text-wrap text-start">${obj.pais3}</span>
-       </button>
-    </div>
+      <div class="order-${arrRandom[3]}">
+         <button class="options false d-flex gap-3 btn py-2 px-3">
+         ${arrLetras[arrRandom[3]]} <small class="fs-6 text-start">${obj.pais3}</small>
+         </button>
+      </div>
+   </div>
     `
 }
 
 export function resultsDOM(score) {
 
-   divElem.innerHTML = `
+   divDemo.innerHTML = `
    <div
    id="demo"
    class="d-flex flex-column justify-content-center align-items-center gap-4"
    style="width: 100%; height: 100%">
    
-
       <div class="text-center mb-3 position-relative" style="width: 60%; bottom:25px">
          <img
             src="./imgs/undraw_winners_ao2o 2.svg"
@@ -123,12 +115,12 @@ export function resultsDOM(score) {
       </div>
 
       <div class="" style="width: 100%;">
-         <p class="fw-bolder fs-1 text-center">Results</p>
-         <p class="text-center fs-5 fw-light">You got <span id="score" class="fs-1 fw-bold">${score}</span>  correct answers</p>
+         <p class="fw-bolder fs-1 text-center" style="color: #1D355D">Results</p>
+         <p class="text-center fs-6 fw-light" style="color: #1D355D">You got <span id="score" class="fs-1 fw-bold">${score}</span>  correct answers</p>
       </div>
 
       <div class="text-center position-relative" style="width: 100%; top: 25px">
-         <button id="tryAgain" class="btn btn-outline-secondary rounded-3 fw-semibold px-4 py-2" style="border: 2px solid #1D355D; color: #1D355D">
+         <button id="tryAgain" class="btn btn-outline-secondary rounded-3 fw-semibold px-4 py-2" style="border: 2px solid #1D355D; color: #1D355D; width: 45%;">
             Try again
          </button>
       </div>

@@ -1,2 +1,0 @@
-Ciclo While para que los países no sean iguales.
-Preguntas aleatorias sobre países o banderas.
